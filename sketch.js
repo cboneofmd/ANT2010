@@ -1,10 +1,15 @@
+var i;
+// var size=random(5,20);
 function setup() {
-createCanvas(windowWidth, windowHeight);
-background(255,0,0);
+	createCanvas(windowWidth, windowHeight);
+	frameRate(10);
 }
+
 function draw() {
-if (mouseIsPressed) {
-var size = random(10, 100);
-ellipse(mouseX, mouseY, size, size);
-}
+	background(200);
+	noStroke();
+	fill(255);
+	for (i=0;i<height;i+=5) {
+	ellipse(random(0, width), i, 10, 10);
+	}
 }
